@@ -17,4 +17,5 @@ bool allObjectsConnected (int* id, int N);
 
 void showUnionFind (int* id, int N);
 
+void freeUnionFind (int* id);
 #endif

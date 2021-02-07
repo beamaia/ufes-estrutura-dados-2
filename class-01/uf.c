@@ -49,3 +49,7 @@ void showUnionFind (int* id, int N) {
 
     printf("\n");
 }
+
+void freeUnionFind (int* id) {
+    free(id);
+}
