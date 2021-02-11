@@ -5,18 +5,22 @@
 
 struct uf {
     int *id;
+    int *sz;
     int N;
 };
 
 UF* unionFindInit (int N) {
     UF *id = (UF*) malloc (sizeof(UF));
     id->N = N;
-    int* array = (int*) malloc (sizeof(int) * N);
-    id->id = array;
-
-    for (int i = 0; i < N; i++) 
-        array[i] = i;
     
+    id->id = (int*) malloc (sizeof(int) * N);
+    id->sz = (int*) malloc (sizeof(int) * N);
+
+    for (int i = 0; i < N; i++) {
+        id->id[i] = i;
+        id->sz[i] = 1;
+    }
+
     return id;
 }
 
@@ -26,6 +30,14 @@ int getID (UF *id, int i) {
 
 void putID (UF* id, int i, int j) {
     id->id[i] = j;
+}
+
+int getSize (UF* id, int i) {
+    return id->sz[i];
+}
+
+void increaseSize (UF* id, int i, int j) {
+    id->sz[i] += id->sz[j];
 }
 
 int getRoot (UF *id, int i) {
@@ -43,7 +55,14 @@ bool connected (UF* id, int p, int q) {
 void createUnion (UF* id, int p, int q) {
     int i = getRoot(id, p);
     int j = getRoot(id, q);
-    putID(id, i, j);
+
+    if (getSize(id, p) < getSize(id, q)) {
+        putID(id, i, j);
+        increaseSize(id, j, i);
+    } else {
+        putID(id, j, i);
+        increaseSize(id, i, j);
+    }
 }
 
 bool allObjectsConnected (UF* id) {
