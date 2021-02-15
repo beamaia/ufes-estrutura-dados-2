@@ -1,0 +1,11 @@
+For 1.txt:
+
+HEAP SUMMARY:
+==13337==     in use at exit: 0 bytes in 0 blocks
+==13337==   total heap usage: 38 allocs, 38 frees, 5,400 bytes allocated
+==13337== 
+==13337== All heap blocks were freed -- no leaks are possible
+==13337== 
+==13337== For lists of detected and suppressed errors, rerun with: -s
+==13337== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
