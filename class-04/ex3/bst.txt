@@ -1,0 +1,20 @@
+Min height: floor of log2(N) 
+Max height: N - 1
+
+N = 10^4
+Heights:
+    1.  34
+    2.  30
+    3.  33
+    4.  31
+    5.  30
+    6.  27
+    7.  30
+    8.  34
+    9.  31
+    10. 32
+    mean height: 31.20
+    std height:   2.04
+
+Min height: floor of log2(10^4) = 9
+Max height: 10^4 - 1 = 999
