@@ -42,6 +42,8 @@ int main (int argc, char* argv[]) {
                 push(stackNum, item);
             }
         }
+        // show(stackNum);
+
         freeStack(stackNum);
         freeStack(stackOp);
     }   

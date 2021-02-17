@@ -98,10 +98,10 @@ Item* pop (Stack* s) {
 void showItem (Item* it) {
     if (it->type == 1) {
         // Type is double
-        printf("Type int, value: %lf\n", *((double*) it->item));
+        printf("Value: %.2lf\n", *((double*) it->item));
     } else if (it->type == 0) {
         // Type is char
-        printf("Type char, value: %c\n", *((char*) it->item));
+        printf("Value: %c\n", *((char*) it->item));
     }   
 }
 
