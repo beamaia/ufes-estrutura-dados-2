@@ -18,8 +18,8 @@ int main (int argc, char* argv[]) {
         exit(1);
     int N = atoi(argv[1]);
 
-    // srand (time(NULL));
-    srand(42);
+    srand (time(NULL));
+    // srand(42);
 
     int random;
     int* numbers  = (int*) malloc(sizeof(int) * N);

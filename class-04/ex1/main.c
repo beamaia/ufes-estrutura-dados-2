@@ -10,7 +10,7 @@ int main (int argc, char* argv[]) {
     tree = insertKey(tree, 10);
     tree = insertKey(tree, 11);
     tree = insertKey(tree, 4);
-    // showTreeTextualNote(tree?);
+    showTreeTextualNote(tree);
     freeBST(tree);
 
     return 0;

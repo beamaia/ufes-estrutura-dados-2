@@ -23,12 +23,14 @@ int main (int argc, char* argv[]) {
     push(stack, tree, 5);
     push(stack, getRightTree(tree), 5);
     push(stack, getLeftTree(tree), 5);
+    printf("Show stack\n");
     showStack(stack);
     printf("\n");
 
     BST* aux1 = pop(stack);
     push(stack, getRightTree(aux1), 5);
     push(stack, getLeftTree(aux1), 5);
+    printf("Show stack\n");
     showStack(stack);
     printf("\n");
     
