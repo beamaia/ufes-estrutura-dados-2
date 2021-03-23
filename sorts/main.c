@@ -24,8 +24,8 @@ int main (int argc, char* argv[]) {
     double seconds = ((double) end - start) / CLOCKS_PER_SEC;
 
     // shows vector sorted
-    // for (int i = 0; i < N; i++)
-    //     printf("%d\n", array[i]);
+    for (int i = 0; i < N; i++)
+        printf("%d\n", array[i]);
 
     // print time
     printf("%lf\n", seconds);
